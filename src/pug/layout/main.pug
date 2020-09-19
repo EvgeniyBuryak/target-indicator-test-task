@@ -5,16 +5,16 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title #{title}
+    title #{'Тестовое задание'}
     meta(name="description", content=description)
     block head
 
   body(class=pageClass)
     .wrapper
       #app
-        include ../includes/modules/header
+        //- include ../includes/modules/header
         .content-wrapper
           block content
-        include ../includes/modules/footer
+        //- include ../includes/modules/footer
 
     block script

@@ -44,15 +44,15 @@ ul, li {
 
 section, .section {
   position: relative;
-  padding: 40px 0;
+  padding: 240px 0;
   @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
+    padding: 236px 0;
   }
   @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
+    padding: 228px 0;
   }
   @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
+    padding: 220px 0;
   }
 }
 
@@ -74,17 +74,17 @@ section, .section {
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  max-width: $desktopWidth;
+  max-width: $phoneWidth;
   @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
+    max-width: $tableWidth;
   }
   @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
+    max-width: $phoneWidth;
   }
   @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
+    max-width: $smPhoneWidth;
   }
 }
 
 // Modules
-// @import "modules/my-module.scss";
+@import "modules/target-indicator.scss";

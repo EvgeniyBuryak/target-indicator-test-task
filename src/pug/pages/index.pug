@@ -8,10 +8,33 @@ block variables
 block content
   section
     .container
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-  example-component
+      //- Мой код начинается отсюда
+      .target-indicator
+        .target-indicator__header
+          .target-indicator__title= 'Target Indicator Demo'
+        .target-indicator__body
+          .target-indicator__figure
+            .target-indicator__subtitle= 'Reached:'
+            .target-indicator__indicator
+              .target-indicator__fill-in
+            .target-indicator__current-amount
+              .target-indicator__container-triangle
+                <svg id="triangle" viewBox="0 0 24 24" width='24' height='11'>
+                 <polygon points="12 12, 24 24, 0 24" fill="#6F6D71"/>
+                </svg>
+                .target-indicator__amount= '$14'
+            +counter('Target', '$15')
+            .target-indicator__info
+              .target-indicator__icon
+              .target-indicator__descr= 'You need $1 more to reach your target.'
+      //- Здесь мой код заканчивается
+
+
+
+      //- +item('item title', 'item descr')
+      //- +item('item title', 'item descr')
+      //- +item('item title', 'item descr')
+  //- example-component
 
 
 block script

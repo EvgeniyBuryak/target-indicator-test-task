@@ -2,3 +2,9 @@ mixin item(title, descr)
   .item
     h2.item-title= title
     p.item-descr= descr
+
+mixin counter(title, amount)
+      .counter
+        .counter__title= title
+        .counter__line
+        .counter__count= amount
