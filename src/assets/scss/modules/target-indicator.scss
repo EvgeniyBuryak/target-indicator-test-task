@@ -1,53 +1,28 @@
-// Font
-$mainFont                : 'Roboto', sans-serif;
-
-// width
-$mainWidth               : 350px;
-$fieldReachedWidth       : 325px;
-
-$maxFieldWidth           : 100%;
-
-// border radius
-$default-radius          : 8px;
-$header-radius           : 5px;
-
-// color
-$default-color           : #FFFFFF;
-$headerField-color       : #4A4949;
-$fieldSurround-color     : #F2F2F2;
-$border-color            : #666666;
-$borderInside-color      : #D6D3D3;
-$major-text-color        : #7F7D81;
+@import "../utils/vars";
 
 .target-indicator {    
-    width                : $mainWidth;
+    max-width            : $mainBodyWidth;
     height               : 150px;
     background-color     : $fieldSurround-color;
     border-radius        : $default-radius;
     box-shadow           : 0 -0.5px 7px rgba(0,0,0,0.5);
     border               : 1px solid $border-color;
     box-sizing           : border-box;
-    
+
     // section
-    //display              : grid;
-    //grid-template-rows   : 30px 120px;
     display              : flex;
     flex-direction       : column;
 }
 
 .target-indicator__header {
-    // position youself
-    //grid-row             : 1;
-
-    // -----
-    height: 30px;
-    background-color: $headerField-color;
-    border-radius: $header-radius $header-radius 0 0;
+    height               : 30px;
+    background-color     : $headerField-color;
+    border-radius        : $header-radius $header-radius 0 0;
 
     // section
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display              : flex;
+    justify-content      : flex-start;
+    align-items          : center;
 }
 
 .target-indicator__title {
@@ -60,10 +35,6 @@ $major-text-color        : #7F7D81;
 }
 
 .target-indicator__body {
-    // position youself
-    //grid-row             : 2;
-
-    // -----
     height               : 120px;
 
     // section
@@ -77,12 +48,16 @@ $major-text-color        : #7F7D81;
     height               : 98px;
     background-color     : $default-color;
     border               : 1px solid $borderInside-color;
-    border-radius        : $default-radius - 3px;
+    border-radius        : $header-radius;
+
+    @media screen and (max-width: $phoneWidth) {
+      width              : 260px;
+    }
 
     // section
     display              : grid;
     grid-template-rows   : 13px 13px 13px 13px 13px 25px 1fr;
-    grid-template-columns: 1fr 83px 60px 60px 50px 1fr;
+    grid-template-columns: 1fr 83px 60px 60px 50px 5px 1fr;
 }
 
 .target-indicator__subtitle {
@@ -115,90 +90,22 @@ $major-text-color        : #7F7D81;
 }
 
 .target-indicator__fill-in {
-    // position youself
-    //grid-row             : 3;
-    //grid-column          : 3/5;
-
-    // -----
     margin               : 3px 0 3px 3px;
     width                : 105px;
     height               : 7px;
     background-color     : #2E89D1;
 }
 
-.target-indicator__current-amount {
+.target-indicator__arrow {
     // position youself
-    grid-row: 3;
-    grid-column: 4;
-
-    // section
-    display: flex;
-    flex-direction: column;
-    //justify-content: flex-end;
-    align-items: flex-end;
+    grid-row             : 4;
+    grid-column          : 4;
 }
 
-.target-indicator__container-triangle {
-    margin-top: 2px;
-    //width: 30%;
-    //height: 30%;
-}
-
-.target-indicator__amount {
-    //padding-top: -10px;
-    //grid-row: 5;
-    //grid-column: 4;
-    //width: inherit;
-    font-size: 12px;
-    line-height: 6px;
-    color: $major-text-color;
-    //display: flex;
-    //justify-content: flex-end;
-}
-
-.counter {
+.target-indicator__counter {
     // position youself
-    grid-row: 2/5;
-    grid-column: 5;
-    // -----
-    color: $default-color;
-    //background-color     : #79787B;
-    //background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
-    //background: linear-gradient(#3f87a6, #ebf8e1, #f69d3c);
-    //border-bottom: 1px double #807D80;
-    box-shadow: inset 0 1px 1px rgba(#f7f7f7, .875), inset 0 -1px 1px rgba(#bbb, .75);
-    background: linear-gradient(#A59FA0, #717074);
-    //background: linear-gradient(#9ea1a6, #fdfdfe) content-box, linear-gradient(#fff, #9c9fa4) padding-box, linear-gradient(#eee, #a4a7ab) border-box;
-    height: 42px;//39px;
-    border-radius: 3px;
-    // section
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.counter__title {
-    font-family: $mainFont;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 500;
-}
-
-.counter__line {
-    width: 46px;
-    height: 1px;
-    content: '';
-    border-bottom: 1px solid rgba(#807D80, .75);
-    box-shadow: 0 1px 1px rgba(#FFF, .25);
-}
-
-.counter__count {
-    font-family: 'Work Sans';
-    font-size: 20px;
-    line-height: 23px;
-    font-weight: 500;
-    //color: #7F7D81;
+    grid-row             : 2/5;
+    grid-column          : 5;
 }
 
 .target-indicator__info {
@@ -219,17 +126,9 @@ $major-text-color        : #7F7D81;
 }
 
 .target-indicator__descr {
-    // position youself
-    //grid-row             : 6;
-    //grid-column          : 2/6;
-
     // font
-    font-size            : 12px;
+    font-size            : 13px;
     font-weight          : 300;    
     letter-spacing       : 0.01em;
     color                : $major-text-color;
-
-    // section
-    //display              : flex;
-    //justify-content      : flex-end;
 }

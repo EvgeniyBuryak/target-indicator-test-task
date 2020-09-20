@@ -1,14 +1,13 @@
 extends ../layout/main
 
 block variables
-  - var title = 'Webpack + Pug';
-  - var description = 'Description for Webpack + Pug';
+  - var title = 'Тестовое задание';
+  - var description = 'Build static web page with following content';
   - var pageClass = 'index-page';
 
 block content
   section
     .container
-      //- Мой код начинается отсюда
       .target-indicator
         .target-indicator__header
           .target-indicator__title= 'Target Indicator Demo'
@@ -17,24 +16,15 @@ block content
             .target-indicator__subtitle= 'Reached:'
             .target-indicator__indicator
               .target-indicator__fill-in
-            .target-indicator__current-amount
-              .target-indicator__container-triangle
-                <svg id="triangle" viewBox="0 0 24 24" width='24' height='11'>
-                 <polygon points="12 12, 24 24, 0 24" fill="#6F6D71"/>
-                </svg>
-                .target-indicator__amount= '$14'
-            +counter('Target', '$15')
+            .target-indicator__arrow
+              +arrow('$14')
+            .target-indicator__counter
+              +counter('Target', '$15')
             .target-indicator__info
               .target-indicator__icon
               .target-indicator__descr= 'You need $1 more to reach your target.'
-      //- Здесь мой код заканчивается
-
-
 
       //- +item('item title', 'item descr')
-      //- +item('item title', 'item descr')
-      //- +item('item title', 'item descr')
-  //- example-component
 
 
 block script
