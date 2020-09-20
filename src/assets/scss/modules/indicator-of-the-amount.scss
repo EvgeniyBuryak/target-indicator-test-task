@@ -2,16 +2,16 @@
 
 .indicator {
     // section
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display          : flex;
+    flex-direction   : column;
+    align-items      : flex-end;
 }
 .indicator__container-triangle {
 }
 
 .indicator__amount {
-    padding-right: 3px;
-    font-size: 12px;
-    line-height: 16px;
-    color: $major-text-color;
+    padding-right    : 3px;
+    font-size        : 12px;
+    line-height      : 16px;
+    color            : $mainFontColor;
 }

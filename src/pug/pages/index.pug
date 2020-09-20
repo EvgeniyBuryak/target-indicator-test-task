@@ -10,10 +10,10 @@ block content
     .container
       .target-indicator
         .target-indicator__header
-          .target-indicator__title= 'Target Indicator Demo'
+          h2.target-indicator__title= 'Target Indicator Demo'
         .target-indicator__body
           .target-indicator__figure
-            .target-indicator__subtitle= 'Reached:'
+            h3.target-indicator__subtitle= 'Reached:'
             .target-indicator__indicator
               .target-indicator__fill-in
             .target-indicator__arrow
@@ -21,16 +21,8 @@ block content
             .target-indicator__counter
               +counter('Target', '$15')
             .target-indicator__info
-              .target-indicator__icon
-              .target-indicator__descr= 'You need $1 more to reach your target.'
-
-      //- +item('item title', 'item descr')
-
+              img.target-indicator__icon(title="Attention", alt="Attention")
+              span.target-indicator__descr= 'You need $1 more to reach your target.'
 
 block script
-  script(type='text/javascript').
-    const foo = true;
-    let bar = function() {};
-    if (foo) {
-    bar(1 + 5)
-    }
+  //- script description

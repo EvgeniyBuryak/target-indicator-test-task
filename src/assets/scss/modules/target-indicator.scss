@@ -1,13 +1,12 @@
 @import "../utils/vars";
 
 .target-indicator {    
-    max-width            : $mainBodyWidth;
     height               : 150px;
-    background-color     : $fieldSurround-color;
+    max-width            : $mainBodyWidth;
     border-radius        : $default-radius;
-    box-shadow           : 0 -0.5px 7px rgba(0,0,0,0.5);
     border               : 1px solid $border-color;
-    box-sizing           : border-box;
+    background-color     : $fieldSurround-color;
+    box-shadow           : 0 -0.5px 7px rgba(0,0,0,0.5);
 
     // section
     display              : flex;
@@ -17,21 +16,21 @@
 .target-indicator__header {
     height               : 30px;
     background-color     : $headerField-color;
-    border-radius        : $header-radius $header-radius 0 0;
+    border-radius        : $less-radius $less-radius 0 0;
 
     // section
     display              : flex;
-    justify-content      : flex-start;
     align-items          : center;
+    justify-content      : flex-start;
 }
 
 .target-indicator__title {
     font-family          : $mainFont;    
     font-size            : 13px;
     font-weight          : 600;
-    color                : $default-color;
     letter-spacing       : 0.05em;
     padding              : 0 12px;
+    color                : $default-color;
 }
 
 .target-indicator__body {
@@ -44,11 +43,11 @@
 }
 
 .target-indicator__figure {
-    width                : $fieldReachedWidth;
     height               : 98px;
+    width                : $fieldReachedWidth;
     background-color     : $default-color;
+    border-radius        : $less-radius;
     border               : 1px solid $borderInside-color;
-    border-radius        : $header-radius;
 
     @media screen and (max-width: $phoneWidth) {
       width              : 260px;
@@ -70,7 +69,7 @@
     font-size            : 14px;
     font-weight          : 400;
     letter-spacing       : 0.03em;
-    color                : $major-text-color;
+    color                : $mainFontColor;
 
     // section
     display              : flex;
@@ -84,15 +83,15 @@
     grid-column          : 3/4;
 
     // -----
-    width                : 120px;
     height               : 13px;
+    width                : 120px;
     background-color     : #CECECE;
 }
 
 .target-indicator__fill-in {
-    margin               : 3px 0 3px 3px;
-    width                : 105px;
+    margin               : 3px;
     height               : 7px;
+    width                : 105px;
     background-color     : #2E89D1;
 }
 
@@ -126,9 +125,8 @@
 }
 
 .target-indicator__descr {
-    // font
     font-size            : 13px;
     font-weight          : 300;    
     letter-spacing       : 0.01em;
-    color                : $major-text-color;
+    color                : $mainFontColor;
 }

@@ -1,17 +1,12 @@
-mixin item(title, descr)
-  .item
-    h2.item-title= title
-    p.item-descr= descr
-
 mixin counter(title, amount)
       .counter
-        .counter__title= title
-        .counter__line
-        .counter__count= amount
+        span.counter__title= title
+        span.counter__line
+        span.counter__count= amount
 
 mixin arrow(amount)
   .indicator
     <svg class="indicator__container-triangle" viewBox="0 0 24 24" width='24' height='11'>
       <polygon points="12 12, 24 24, 0 24" fill="#6F6D71"/>
     </svg>
-    .indicator__amount= amount
+    span.indicator__amount= amount
